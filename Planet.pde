@@ -14,10 +14,6 @@ class Planet {
    this.azimuthRad = (azimuth * PI) / 180;
  }
  
- public void show() {
- 
- }
- 
  public void move(float T) {
    this.x = a * cos(polarAngleRad) * cos(azimuthRad + T);
    this.y = b * cos(polarAngleRad) * sin(azimuthRad + T);
