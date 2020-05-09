@@ -19,6 +19,7 @@ Planet m7 = new Planet(30, 20, 60, 20, 90);
 
 float time;
 PShape chicken;
+PShape egg;
 
 void setup() {
   size(800, 600, P3D);
@@ -26,6 +27,7 @@ void setup() {
   time = 0;
   sphereDetail(15);
   chicken = loadShape("Model/chicken.obj");
+  egg = loadShape("Model/egg.obj");
 }
 
 void draw() {
@@ -152,7 +154,9 @@ void draw() {
       fill(#dd4ee0);
       specular(#03a04a);
       shininess(3);
-      sphere(10);
+      scale(2);
+      rotateZ(PI/3);
+      shape(egg);
     popMatrix();
   popMatrix();
   
